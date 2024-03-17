@@ -1,0 +1,55 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+
+   int a,b,c,d;
+   float  win, loose, e;
+
+   printf("Enter Total Price of Turf: \n");
+   scanf("%d",&a);
+
+   printf("Enter Number of Players: \n");
+   scanf("%d",&b);
+
+   printf("Did you Win(1) or Loose(0): \n");
+   scanf("%d",&c);
+
+   printf("Choose Split\n");
+   printf("1. 50-50: \n");
+   printf("2. 60-40: \n");
+   printf("3. 70-30: \n");
+   scanf("%d",&d);
+
+   if(d==1)
+   {
+       win = loose = 0.5;
+   }
+
+   else if (d==2)
+   {
+       win=0.4;
+       loose=0.6;
+   }
+   else if (d==3)
+   {
+       win=0.7;
+       loose=0.3;
+   }
+
+   if (c==1)
+   {
+       e=a*win/b;
+
+   printf("Winning team you need to pay: %.2f\n",e);
+   }
+   else
+   {
+       e=a*loose/b;
+
+   printf("Loosing team you need to pay: %.2f\n",e);
+   }
+
+    return 0;
+}
